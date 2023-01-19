@@ -16,6 +16,9 @@
 		B74CEAAD296DEA0700A479A9 /* RidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEAAC296DEA0700A479A9 /* RidesTests.swift */; };
 		B74CEAB7296DEA0700A479A9 /* RidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEAB6296DEA0700A479A9 /* RidesUITests.swift */; };
 		B74CEAB9296DEA0700A479A9 /* RidesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEAB8296DEA0700A479A9 /* RidesUITestsLaunchTests.swift */; };
+		B74CEACE2977550400A479A9 /* VehicleStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEACD2977550400A479A9 /* VehicleStructure.swift */; };
+		B74CEAD62977C5C100A479A9 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEAD52977C5C100A479A9 /* VehicleViewModel.swift */; };
+		B74CEAD82977C64200A479A9 /* VehicleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEAD72977C64200A479A9 /* VehicleDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		B74CEAB2296DEA0700A479A9 /* RidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74CEAB6296DEA0700A479A9 /* RidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesUITests.swift; sourceTree = "<group>"; };
 		B74CEAB8296DEA0700A479A9 /* RidesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B74CEACD2977550400A479A9 /* VehicleStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleStructure.swift; sourceTree = "<group>"; };
+		B74CEAD52977C5C100A479A9 /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		B74CEAD72977C64200A479A9 /* VehicleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,10 @@
 			children = (
 				B74CEA95296DEA0600A479A9 /* AppDelegate.swift */,
 				B74CEA97296DEA0600A479A9 /* SceneDelegate.swift */,
-				B74CEA99296DEA0600A479A9 /* ViewController.swift */,
 				B74CEA9B296DEA0600A479A9 /* Main.storyboard */,
+				B74CEACA296F29C900A479A9 /* Model */,
+				B74CEAC5296DEEB500A479A9 /* ViewModel */,
+				B74CEAC6296DEEC900A479A9 /* Controller */,
 				B74CEA9E296DEA0700A479A9 /* Assets.xcassets */,
 				B74CEAA0296DEA0700A479A9 /* LaunchScreen.storyboard */,
 				B74CEAA3296DEA0700A479A9 /* Info.plist */,
@@ -125,6 +133,31 @@
 				B74CEAB8296DEA0700A479A9 /* RidesUITestsLaunchTests.swift */,
 			);
 			path = RidesUITests;
+			sourceTree = "<group>";
+		};
+		B74CEAC5296DEEB500A479A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B74CEAD52977C5C100A479A9 /* VehicleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B74CEAC6296DEEC900A479A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B74CEA99296DEA0600A479A9 /* ViewController.swift */,
+				B74CEAD72977C64200A479A9 /* VehicleDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B74CEACA296F29C900A479A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B74CEACD2977550400A479A9 /* VehicleStructure.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B74CEA9A296DEA0600A479A9 /* ViewController.swift in Sources */,
+				B74CEACE2977550400A479A9 /* VehicleStructure.swift in Sources */,
+				B74CEAD82977C64200A479A9 /* VehicleDetailsViewController.swift in Sources */,
+				B74CEAD62977C5C100A479A9 /* VehicleViewModel.swift in Sources */,
 				B74CEA96296DEA0600A479A9 /* AppDelegate.swift in Sources */,
 				B74CEA98296DEA0600A479A9 /* SceneDelegate.swift in Sources */,
 			);
@@ -444,6 +480,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +508,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
