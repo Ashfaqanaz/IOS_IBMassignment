@@ -18,6 +18,8 @@ class VehicleDetailsViewController: UIViewController {
     
     @IBOutlet weak var carTypeLabel: UILabel!
     @IBOutlet weak var makeAndModelLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let vehicle = vehicle {
@@ -25,7 +27,23 @@ class VehicleDetailsViewController: UIViewController {
             makeAndModelLabel.text = vehicle.make_and_model
             colorLabel.text = vehicle.color 
             carTypeLabel.text = vehicle.car_type
+            
+            let emissions = calculateEmissions(kilometrage: Double(vehicle.kilometrage))
+                let label = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.frame.width, height: collectionView.frame.height))
+            label.text = "Emissions: "+"\(emissions) "+"units"
+                label.textAlignment = .center
+                collectionView.addSubview(label)
         }
+    }
+    
+    func calculateEmissions(kilometrage: Double) -> Double {
+        var emissions: Double = 0
+        if kilometrage <= 5000 {
+            emissions = kilometrage * 1
+        } else {
+            emissions = (5000 * 1) + ((kilometrage - 5000) * 1.5)
+        }
+        return emissions
     }
 }
 
